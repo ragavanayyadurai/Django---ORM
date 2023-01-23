@@ -5,7 +5,7 @@ To develop a Django application to store and retrieve data from a database using
 
 ## Entity Relationship Diagram
 
-![OUTPUT](./output.png)
+![OUTPUT](/pic2.png)
 
 ## DESIGN STEPS
 
@@ -36,6 +36,7 @@ Records are added and saved in the table inside the database.
 ```python
 from django.db import models
 from django.contrib import admin
+# Create your models here.
 
 class Database(models.Model):
     Patient_id = models.CharField(max_length=8, primary_key=True ,help_text="Your Patient id")
@@ -46,9 +47,10 @@ class Database(models.Model):
 
 class PatientAdmin(admin.ModelAdmin):
     list_display = ('Patient_id','Patient_name','Patient_age','email','Contact_number')
+
  ```   
 ## OUTPUT
-![OUTPUT](./op.png)
+![OUTPUT](/pic1.png)
 
 
 ## RESULT
